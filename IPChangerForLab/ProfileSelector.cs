@@ -54,13 +54,19 @@ namespace IPChangerForLab
         private void CreateProfile_Click(object sender, EventArgs e)
         {
             CreateProfile createProfile = new CreateProfile();
-            createProfile.Show();
-            Console.WriteLine("Yo!");
-            foreach (NicProfile profile in profileList.NicProfiles)
-            {
-                Console.WriteLine(profile.Name);
-                checkedProfileList.Items.Add(profile.Name);
+            createProfile.ShowDialog();
+            
+            if (createProfile.nicProfile != null)
+            { 
+                profileList.AddProfile(createProfile.nicProfile);
+                checkedProfileList.Items.Clear();
+               
+                foreach (NicProfile profile in profileList.NicProfiles)
+                {
+                    checkedProfileList.Items.Add(profile.Name);
+                }
             }
+
         }
 
         private void NetworkCard_SelectedIndex(object sender, EventArgs e)

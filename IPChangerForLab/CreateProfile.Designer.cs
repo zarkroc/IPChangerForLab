@@ -47,7 +47,7 @@
             this.labelIP.Location = new System.Drawing.Point(26, 12);
             this.labelIP.Name = "labelIP";
             this.labelIP.Size = new System.Drawing.Size(58, 13);
-            this.labelIP.TabIndex = 0;
+            this.labelIP.TabIndex = 7;
             this.labelIP.Text = "IP number:";
             // 
             // labelNetmask
@@ -56,7 +56,7 @@
             this.labelNetmask.Location = new System.Drawing.Point(32, 43);
             this.labelNetmask.Name = "labelNetmask";
             this.labelNetmask.Size = new System.Drawing.Size(52, 13);
-            this.labelNetmask.TabIndex = 1;
+            this.labelNetmask.TabIndex = 8;
             this.labelNetmask.Text = "Netmask:";
             // 
             // labelGateway
@@ -65,7 +65,7 @@
             this.labelGateway.Location = new System.Drawing.Point(32, 72);
             this.labelGateway.Name = "labelGateway";
             this.labelGateway.Size = new System.Drawing.Size(52, 13);
-            this.labelGateway.TabIndex = 2;
+            this.labelGateway.TabIndex = 9;
             this.labelGateway.Text = "Gateway:";
             // 
             // inputBoxIP
@@ -73,31 +73,31 @@
             this.inputBoxIP.Location = new System.Drawing.Point(87, 8);
             this.inputBoxIP.Name = "inputBoxIP";
             this.inputBoxIP.Size = new System.Drawing.Size(200, 20);
-            this.inputBoxIP.TabIndex = 3;
+            this.inputBoxIP.TabIndex = 0;
             // 
             // inputBoxNetmask
             // 
             this.inputBoxNetmask.Location = new System.Drawing.Point(87, 40);
             this.inputBoxNetmask.Name = "inputBoxNetmask";
             this.inputBoxNetmask.Size = new System.Drawing.Size(200, 20);
-            this.inputBoxNetmask.TabIndex = 4;
+            this.inputBoxNetmask.TabIndex = 1;
             // 
             // inputBoxGateway
             // 
             this.inputBoxGateway.Location = new System.Drawing.Point(87, 69);
             this.inputBoxGateway.Name = "inputBoxGateway";
             this.inputBoxGateway.Size = new System.Drawing.Size(200, 20);
-            this.inputBoxGateway.TabIndex = 5;
+            this.inputBoxGateway.TabIndex = 2;
             // 
             // profileButtonOk
             // 
             this.profileButtonOk.Location = new System.Drawing.Point(87, 138);
             this.profileButtonOk.Name = "profileButtonOk";
             this.profileButtonOk.Size = new System.Drawing.Size(75, 23);
-            this.profileButtonOk.TabIndex = 6;
+            this.profileButtonOk.TabIndex = 5;
             this.profileButtonOk.Text = "OK";
             this.profileButtonOk.UseVisualStyleBackColor = true;
-            this.profileButtonOk.Click += new System.EventHandler(this.profileButtonOk_Click);
+            this.profileButtonOk.Click += new System.EventHandler(this.ProfileButtonOk_Click);
             // 
             // profileButtonCancel
             // 
@@ -105,10 +105,10 @@
             this.profileButtonCancel.Location = new System.Drawing.Point(212, 138);
             this.profileButtonCancel.Name = "profileButtonCancel";
             this.profileButtonCancel.Size = new System.Drawing.Size(75, 23);
-            this.profileButtonCancel.TabIndex = 7;
+            this.profileButtonCancel.TabIndex = 6;
             this.profileButtonCancel.Text = "Cancel";
             this.profileButtonCancel.UseVisualStyleBackColor = true;
-            this.profileButtonCancel.Click += new System.EventHandler(this.profileButtonCancel_Click);
+            this.profileButtonCancel.Click += new System.EventHandler(this.ProfileButtonCancel_Click);
             // 
             // ProfileName
             // 
@@ -116,7 +116,7 @@
             this.ProfileName.Location = new System.Drawing.Point(43, 99);
             this.ProfileName.Name = "ProfileName";
             this.ProfileName.Size = new System.Drawing.Size(38, 13);
-            this.ProfileName.TabIndex = 8;
+            this.ProfileName.TabIndex = 10;
             this.ProfileName.Text = "Name:";
             // 
             // inputBoxName
@@ -124,7 +124,7 @@
             this.inputBoxName.Location = new System.Drawing.Point(87, 95);
             this.inputBoxName.Name = "inputBoxName";
             this.inputBoxName.Size = new System.Drawing.Size(200, 20);
-            this.inputBoxName.TabIndex = 9;
+            this.inputBoxName.TabIndex = 3;
             // 
             // checkBoxDhcp
             // 
@@ -132,10 +132,10 @@
             this.checkBoxDhcp.Location = new System.Drawing.Point(87, 122);
             this.checkBoxDhcp.Name = "checkBoxDhcp";
             this.checkBoxDhcp.Size = new System.Drawing.Size(75, 17);
-            this.checkBoxDhcp.TabIndex = 10;
+            this.checkBoxDhcp.TabIndex = 4;
             this.checkBoxDhcp.Text = "UseDHCP";
             this.checkBoxDhcp.UseVisualStyleBackColor = true;
-            this.checkBoxDhcp.CheckedChanged += new System.EventHandler(this.checkBoxDhcp_CheckedChanged);
+            this.checkBoxDhcp.CheckedChanged += new System.EventHandler(this.CheckBoxDhcp_CheckedChanged);
             // 
             // CreateProfile
             // 
@@ -158,6 +158,7 @@
             this.Name = "CreateProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CreateProfile";
+            this.Load += new System.EventHandler(this.CreateProfile_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
